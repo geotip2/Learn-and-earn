@@ -4,7 +4,8 @@ Features:
 - User sign-up / sign-in (Supabase Auth).
 - Referral system: every user gets a referral code / link.
 - Membership purchase via Flutterwave.
-- 20% referral commission credited to referrer on successful payment.
+- 20% referral commission credited to referrer on successful paid payment.
+- Free-signup referral reward: referrer gets a credits reward when a referred user activates a Free plan.
 - Admin area: manage users, memberships, payments, commissions, post announcements, upgrade/downgrade users.
 - Host frontend on Vercel, use Supabase for DB and auth.
 
@@ -23,6 +24,12 @@ Env variables (in Vercel project settings):
 - FLUTTERWAVE_PUBLIC_KEY
 - FLUTTERWAVE_SECRET_KEY
 - NEXT_PUBLIC_APP_URL (e.g., https://your-app.vercel.app)
+- REFERRAL_REWARD_FREE (optional, default: 500) — credits awarded to referrer when referred user activates Free plan
+
+Admin creation (one-time):
+- You can set an existing user as admin by running the script `scripts/create-admin-by-email.js` after the user has signed up with the given email.
+  Example:
+  ADMIN_EMAIL=NaijaRemotehub@gmail.com SUPABASE_URL=<your-supabase-url> SUPABASE_SERVICE_ROLE_KEY=<your-service-role-key> node scripts/create-admin-by-email.js
 
 Local dev:
 - npm install
