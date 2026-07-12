@@ -15,9 +15,9 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 async function seed() {
   const plans = [
     { name: 'Free', price: 0, duration_days: 0 }, // duration_days = 0 means unlimited
-    { name: 'Basic Monthly', price: 1000, duration_days: 30 },
-    { name: 'Pro Monthly', price: 2000, duration_days: 30 },
-    { name: 'Lifetime', price: 10000, duration_days: 0 } // 0 -> unlimited
+    { name: 'Basic Monthly', price: 8000, duration_days: 30 },
+    { name: 'Pro Monthly', price: 25000, duration_days: 30 },
+    { name: 'Lifetime', price: 80000, duration_days: 0 } // 0 -> unlimited
   ];
 
   for (const p of plans) {

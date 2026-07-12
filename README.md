@@ -9,6 +9,12 @@ Features:
 - Admin area: manage users, memberships, payments, commissions, post announcements, upgrade/downgrade users.
 - Host frontend on Vercel, use Supabase for DB and auth.
 
+Membership plans (seeded):
+- Free (0 NGN, unlimited)
+- Basic Monthly (8,000 NGN, 30 days)
+- Pro Monthly (25,000 NGN, 30 days)
+- Lifetime (80,000 NGN, unlimited)
+
 Quick setup:
 1. Create a Supabase project.
 2. Run the SQL in `supabase/schema.sql` in your Supabase SQL editor.
